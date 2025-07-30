@@ -1,26 +1,191 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Crimson+Pro:wght@400;600&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-deep-water: #0a1628;
+  --color-stream-blue: #1e3a5f;
+  --color-morning-mist: #f7f9fb;
+  --color-river-stone: #e2e8f0;
+  --color-casting-green: #059669;
+  --color-fly-orange: #ea580c;
+  --color-current-teal: #0891b2;
+  --color-terminal-text: #e0e0e0;
+  --color-code-bg: #1a1a1a;
+  --color-syntax-green: #10b981;
+  --color-dark-card: #1e293b;
+  --color-dark-border: #334155;
+  --color-code-border: #374151;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-morning-mist);
+  color: var(--color-deep-water);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: var(--color-deep-water);
+  color: var(--color-terminal-text);
+}
+
+/* Custom scrollbar for dark mode */
+.dark {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-border) var(--color-deep-water);
+}
+
+.dark::-webkit-scrollbar {
+  width: 12px;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: var(--color-deep-water);
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-border);
+  border-radius: 6px;
+  border: 2px solid var(--color-deep-water);
+}
+
+/* Code block styling */
+pre,
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-casting-green);
+}
+
+/* Utility classes for custom colors */
+.text-casting-green {
+  color: var(--color-casting-green);
+}
+.bg-casting-green {
+  background-color: var(--color-casting-green);
+}
+.border-casting-green {
+  border-color: var(--color-casting-green);
+}
+.text-deep-water {
+  color: var(--color-deep-water);
+}
+.bg-deep-water {
+  background-color: var(--color-deep-water);
+}
+.text-river-stone {
+  color: var(--color-river-stone);
+}
+.border-river-stone {
+  border-color: var(--color-river-stone);
+}
+.text-terminal-text {
+  color: var(--color-terminal-text);
+}
+.border-dark-border {
+  border-color: var(--color-dark-border);
+}
+.bg-stream-blue {
+  background-color: var(--color-stream-blue);
+}
+.text-current-teal {
+  color: var(--color-current-teal);
+}
+.bg-current-teal {
+  background-color: var(--color-current-teal);
+}
+.text-morning-mist {
+  color: var(--color-morning-mist);
+}
+.bg-morning-mist {
+  background-color: var(--color-morning-mist);
+}
+.text-stream-blue {
+  color: var(--color-stream-blue);
+}
+.bg-dark-card {
+  background-color: var(--color-dark-card);
+}
+.bg-code-bg {
+  background-color: var(--color-code-bg);
+}
+.text-fly-orange {
+  color: var(--color-fly-orange);
+}
+.bg-fly-orange {
+  background-color: var(--color-fly-orange);
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-muted-foreground {
+    @apply text-river-stone dark:text-terminal-text/60;
+  }
+
+  .border-card-border {
+    @apply border-river-stone dark:border-dark-border;
+  }
+
+  .bg-background {
+    @apply bg-morning-mist dark:bg-deep-water;
+  }
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 8s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
