@@ -231,7 +231,7 @@ export default function PhilosophyPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="from-casting-green to-current-teal overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-background/95 rounded-xl bg-white/95 p-8 text-center backdrop-blur-md md:p-12">
+            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 text-center backdrop-blur-md md:p-12">
               <h2 className="text-primary mb-4 text-3xl font-bold">
                 Ready to Try a Different Approach?
               </h2>

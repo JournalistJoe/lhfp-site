@@ -13,6 +13,7 @@ const navItems = [
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/about', label: 'About' },
   { href: '/case-studies', label: 'Case Studies' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Cast a Line' },
 ]
 

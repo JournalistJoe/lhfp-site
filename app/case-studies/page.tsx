@@ -2,60 +2,60 @@
 
 import Link from 'next/link'
 import { ArrowRight, ChartLine, Package, Storefront } from '@phosphor-icons/react'
+import { client } from '@/src/sanity/client'
+import { CASE_STUDIES_QUERY } from '@/src/sanity/lib/queries'
+import { urlFor } from '@/src/sanity/client'
+import { useEffect, useState } from 'react'
 
-// Hardcoded case studies for now - will be replaced with Sanity CMS data
-const caseStudies = [
-  {
-    id: 'sustainable-food-brand',
-    slug: 'sustainable-food-brand',
-    title: '10x Email Revenue for Sustainable Food Brand',
-    client: 'Pacific Harvest Co.',
-    industry: 'Food & Beverage',
-    Icon: Package,
-    challenge: 'Email list of 15,000 generating less than $2K/month',
-    result: 'Now driving $20K+ monthly with 45% open rates',
-    metrics: [
-      { label: 'Email Revenue', value: '10x increase' },
-      { label: 'Open Rate', value: '45%' },
-      { label: 'Click Rate', value: '12%' },
-    ],
-    color: 'from-casting-green to-current-teal',
-  },
-  {
-    id: 'b2b-distributor',
-    slug: 'b2b-distributor',
-    title: 'Custom Ordering System for B2B Distributor',
-    client: 'Mountain Supply Chain',
-    industry: 'B2B Distribution',
-    Icon: Storefront,
-    challenge: 'Manual order processing taking 20+ hours weekly',
-    result: 'Automated system saving 80% of processing time',
-    metrics: [
-      { label: 'Time Saved', value: '80%' },
-      { label: 'Order Accuracy', value: '99.8%' },
-      { label: 'Customer Satisfaction', value: '+35%' },
-    ],
-    color: 'from-stream-blue to-deep-water',
-  },
-  {
-    id: 'local-brewery',
-    slug: 'local-brewery',
-    title: 'Data Capture Overhaul for Local Brewery',
-    client: 'Okanagan Craft Brewing',
-    industry: 'Hospitality',
-    Icon: ChartLine,
-    challenge: 'No customer data despite 500+ daily visitors',
-    result: 'Building email list of 2,000+ in 3 months',
-    metrics: [
-      { label: 'Email Subscribers', value: '2,000+' },
-      { label: 'Event Attendance', value: '+65%' },
-      { label: 'Repeat Visits', value: '+40%' },
-    ],
-    color: 'from-fly-orange to-casting-green',
-  },
-]
+interface CaseStudy {
+  _id: string
+  title: string
+  slug: { current: string }
+  client: string
+  industry: string
+  services: string[]
+  excerpt: string
+  featuredImage?: any
+  publishedAt: string
+}
+
+// Icon mapping based on industry
+const getIndustryIcon = (industry: string) => {
+  const iconMap: Record<string, any> = {
+    'Food & Beverage': Package,
+    'B2B Distribution': Storefront,
+    'Hospitality': ChartLine,
+  }
+  return iconMap[industry] || Package
+}
+
+// Color mapping based on index
+const getGradientColor = (index: number) => {
+  const colors = [
+    'from-casting-green to-current-teal',
+    'from-stream-blue to-deep-water',
+    'from-fly-orange to-casting-green',
+  ]
+  return colors[index % colors.length]
+}
 
 export default function CaseStudiesPage() {
+  const [caseStudies, setCaseStudies] = useState<CaseStudy[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchCaseStudies() {
+      try {
+        const data = await client.fetch<CaseStudy[]>(CASE_STUDIES_QUERY)
+        setCaseStudies(data)
+      } catch (error) {
+        console.error('Error fetching case studies:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchCaseStudies()
+  }, [])
   return (
     <div className="relative min-h-screen">
       {/* Page-wide animated water background */}
@@ -84,10 +84,22 @@ export default function CaseStudiesPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
-            {caseStudies.map((study) => (
+            {loading ? (
+              <div className="flex justify-center items-center py-20">
+                <div className="text-casting-green">Loading case studies...</div>
+              </div>
+            ) : caseStudies.length === 0 ? (
+              <div className="text-center py-20">
+                <p className="text-muted-foreground">No case studies available yet.</p>
+              </div>
+            ) : (
+              caseStudies.map((study, index) => {
+              const Icon = getIndustryIcon(study.industry)
+              const gradientColor = getGradientColor(index)
+              return (
               <Link
                 key={study.id}
-                href={`/case-studies/${study.slug}`}
+                href={`/case-studies/${study.slug.current}`}
                 className="group block"
               >
                 <div className="dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 overflow-hidden rounded-2xl bg-surface backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl dark:ring-1">
@@ -96,7 +108,7 @@ export default function CaseStudiesPage() {
                     <div className="flex-1 p-8 md:p-12">
                       <div className="mb-4 flex items-center gap-4">
                         <div className="text-casting-green">
-                          <study.Icon size={32} weight="regular" />
+                          <Icon size={32} weight="regular" />
                         </div>
                         <div>
                           <p className="text-muted-foreground text-sm font-medium">
@@ -112,23 +124,16 @@ export default function CaseStudiesPage() {
                         {study.title}
                       </h2>
 
-                      <div className="mb-6 space-y-4">
-                        <div>
-                          <p className="text-muted-foreground mb-1 text-sm font-medium uppercase tracking-wider">
-                            Challenge
-                          </p>
-                          <p className="text-secondary">
-                            {study.challenge}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-muted-foreground mb-1 text-sm font-medium uppercase tracking-wider">
-                            Result
-                          </p>
-                          <p className="text-casting-green font-medium">
-                            {study.result}
-                          </p>
-                        </div>
+                      <div className="mb-6">
+                        <p className="text-secondary">
+                          {study.excerpt}
+                        </p>
+                      </div>
+
+                      <div className="mb-6">
+                        <p className="text-muted-foreground text-sm">
+                          Services: {study.services.join(', ')}
+                        </p>
                       </div>
 
                       <div className="flex items-center gap-2 text-casting-green opacity-0 transition-all group-hover:opacity-100">
@@ -141,30 +146,28 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
-                    {/* Metrics Side */}
+                    {/* Image/Gradient Side */}
                     <div
-                      className={`flex-none bg-gradient-to-br ${study.color} p-8 md:p-12 lg:w-96`}
+                      className={`flex-none bg-gradient-to-br ${gradientColor} p-8 md:p-12 lg:w-96 relative overflow-hidden`}
                     >
-                      <h3 className="mb-6 text-xl font-bold text-white">
-                        Key Results
-                      </h3>
-                      <div className="space-y-4">
-                        {study.metrics.map((metric) => (
-                          <div key={metric.label}>
-                            <p className="text-sm font-medium text-white/80">
-                              {metric.label}
-                            </p>
-                            <p className="text-3xl font-bold text-white">
-                              {metric.value}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
+                      {study.featuredImage ? (
+                        <img
+                          src={urlFor(study.featuredImage).width(400).height(300).url()}
+                          alt={study.title}
+                          className="w-full h-full object-cover absolute inset-0"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <Icon size={120} weight="thin" className="text-white/20" />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               </Link>
-            ))}
+              )
+            })
+            )}
           </div>
 
           {/* CTA Section */}

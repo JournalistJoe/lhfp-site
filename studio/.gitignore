@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules
+
+# Compiled Sanity Studio
+/dist
+
+# Temporary Sanity runtime
+/.sanity
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Environment variables
+.env.development
+.env.production
+
+# Typescript
+*.tsbuildinfo

@@ -171,15 +171,9 @@ export default function AboutPage() {
                 </p>
                 <p className="text-secondary mt-4">
                   When not debugging code or optimizing email flows, you&apos;ll
-                  find them actually fly fishing the streams around West
-                  Kelowna, still observing, still learning, still matching the
+                  find them actually fly fishing the streams around
+                  Kelowna, BC still observing, still learning, still matching the
                   hatch.
-                </p>
-                <p className="text-secondary mt-4">
-                  Previous catches include helping a sustainable food brand 10x
-                  their email revenue and building a custom ordering system for
-                  a B2B distributor. Current obsessions include AI-assisted
-                  development workflows and privacy-first analytics.
                 </p>
               </div>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
