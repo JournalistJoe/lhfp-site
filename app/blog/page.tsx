@@ -5,32 +5,13 @@ import { useState, useEffect } from 'react'
 import { client } from '@/src/sanity/client'
 import { BLOG_POSTS_QUERY, FEATURED_POSTS_QUERY } from '@/src/sanity/lib/queries'
 import { urlFor } from '@/src/sanity/client'
-import { Calendar, Clock, ArrowRight, Tag } from '@phosphor-icons/react'
-
-interface BlogPost {
-  _id: string
-  title: string
-  slug: { current: string }
-  author: {
-    name: string
-    image?: any
-  }
-  excerpt: string
-  mainImage?: any
-  categories: Array<{
-    title: string
-    slug: { current: string }
-    color?: string
-  }>
-  tags?: string[]
-  publishedAt: string
-  readingTime?: number
-  featured?: boolean
-}
+import { Calendar, Clock, ArrowRight } from '@phosphor-icons/react'
+import Image from 'next/image'
+import { BlogPost } from '@/src/sanity/types'
 
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([])
-  const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([])
+  const [, setFeaturedPosts] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
@@ -160,9 +141,11 @@ export default function BlogPage() {
                   <article className="dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 h-full overflow-hidden rounded-2xl bg-surface backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl dark:ring-1">
                     {post.mainImage && (
                       <div className="aspect-video overflow-hidden bg-gradient-to-br from-stream-blue to-deep-water">
-                        <img
+                        <Image
                           src={urlFor(post.mainImage).width(600).height(338).url()}
                           alt={post.title}
+                          width={600}
+                          height={338}
                           className="w-full h-full object-cover transition-transform group-hover:scale-105"
                         />
                       </div>
@@ -218,9 +201,11 @@ export default function BlogPage() {
                       {/* Author */}
                       <div className="mt-4 pt-4 border-t border-dark-border/20 flex items-center gap-3">
                         {post.author.image && (
-                          <img
+                          <Image
                             src={urlFor(post.author.image).width(32).height(32).url()}
                             alt={post.author.name}
+                            width={32}
+                            height={32}
                             className="w-8 h-8 rounded-full"
                           />
                         )}

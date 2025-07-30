@@ -6,22 +6,12 @@ import { client } from '@/src/sanity/client'
 import { CASE_STUDIES_QUERY } from '@/src/sanity/lib/queries'
 import { urlFor } from '@/src/sanity/client'
 import { useEffect, useState } from 'react'
-
-interface CaseStudy {
-  _id: string
-  title: string
-  slug: { current: string }
-  client: string
-  industry: string
-  services: string[]
-  excerpt: string
-  featuredImage?: any
-  publishedAt: string
-}
+import { CaseStudy } from '@/src/sanity/types'
+import Image from 'next/image'
 
 // Icon mapping based on industry
 const getIndustryIcon = (industry: string) => {
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, typeof Package> = {
     'Food & Beverage': Package,
     'B2B Distribution': Storefront,
     'Hospitality': ChartLine,
@@ -98,7 +88,7 @@ export default function CaseStudiesPage() {
               const gradientColor = getGradientColor(index)
               return (
               <Link
-                key={study.id}
+                key={study._id}
                 href={`/case-studies/${study.slug.current}`}
                 className="group block"
               >
@@ -151,9 +141,11 @@ export default function CaseStudiesPage() {
                       className={`flex-none bg-gradient-to-br ${gradientColor} p-8 md:p-12 lg:w-96 relative overflow-hidden`}
                     >
                       {study.featuredImage ? (
-                        <img
+                        <Image
                           src={urlFor(study.featuredImage).width(400).height(300).url()}
                           alt={study.title}
+                          width={400}
+                          height={300}
                           className="w-full h-full object-cover absolute inset-0"
                         />
                       ) : (
