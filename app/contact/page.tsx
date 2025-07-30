@@ -41,6 +41,8 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    console.log('Form submitted at step:', formStep)
+    console.log('Form data:', formData)
     setIsSubmitting(true)
 
     // Web3Forms API - You'll need to add your access key to environment variables
