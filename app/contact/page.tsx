@@ -51,7 +51,7 @@ export default function ContactPage() {
         Accept: 'application/json',
       },
       body: JSON.stringify({
-        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'cc811c42-fc65-4656-98ee-bf486f14020f',
         ...formData,
         subject: `New inquiry from ${formData.name} - ${formData.projectType}`,
       }),
@@ -71,6 +71,9 @@ export default function ContactPage() {
         timeline: '',
         message: '',
       })
+    } else {
+      console.error('Form submission failed:', result)
+      alert('Failed to send message. Please try again or email directly.')
     }
     
     setIsSubmitting(false)
