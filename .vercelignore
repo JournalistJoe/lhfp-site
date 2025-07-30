@@ -1,0 +1,10 @@
+# Ignore the studio directory during Vercel builds
+/studio
+
+# Other common ignores
+.git
+.gitignore
+README.md
+.env*
+.vscode
+.idea
