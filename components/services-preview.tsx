@@ -50,12 +50,12 @@ const services = [
 export function ServicesPreview() {
   return (
     <section className="relative px-4 py-24 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl">
         <FadeIn className="mb-16 text-center">
-          <h2 className="text-morning-mist dark:text-terminal-text mb-4 text-4xl font-bold md:text-5xl">
+          <h2 className="text-primary mb-4 text-4xl font-bold md:text-5xl">
             Our Services
           </h2>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-2xl text-lg md:text-xl">
+          <p className="text-secondary mx-auto max-w-2xl text-lg md:text-xl">
             Tools crafted for the specific waters you&apos;re fishing
           </p>
         </FadeIn>
@@ -66,20 +66,20 @@ export function ServicesPreview() {
               <ScaleOnHover>
                 <Link
                   href={service.href}
-                  className="group dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 relative block h-full overflow-hidden rounded-xl bg-white/90 p-6 shadow-lg backdrop-blur-md transition-all hover:shadow-xl dark:shadow-none dark:ring-1"
+                  className="group bg-surface dark:bg-dark-surface dark:ring-dark-border-subtle dark:hover:ring-casting-green/50 relative block h-full overflow-hidden rounded-xl p-6 shadow-lg backdrop-blur-md transition-all hover:shadow-xl dark:shadow-none dark:ring-1"
                 >
               {/* Gradient overlay on hover */}
               <div className="from-casting-green/0 to-casting-green/0 group-hover:from-casting-green/5 group-hover:to-casting-green/10 absolute inset-0 bg-gradient-to-br opacity-0 transition-opacity group-hover:opacity-100" />
 
               <div className="relative z-10">
-                <h3 className="text-deep-water dark:text-terminal-text mb-2 text-xl font-semibold flex items-center gap-2">
+                <h3 className="text-primary mb-2 text-xl font-semibold flex items-center gap-2">
                   <service.Icon size={24} weight="regular" className="text-casting-green flex-shrink-0" />
                   {service.title}
                 </h3>
-                <p className="text-stream-blue dark:text-terminal-text/70 mb-3 text-sm">
+                <p className="text-secondary mb-3 text-sm">
                   {service.description}
                 </p>
-                <p className="text-river-stone dark:text-terminal-text/60 mb-4 text-sm">
+                <p className="text-muted-foreground mb-4 text-sm">
                   {service.details}
                 </p>
                 <p className="text-casting-green font-mono text-sm font-semibold">

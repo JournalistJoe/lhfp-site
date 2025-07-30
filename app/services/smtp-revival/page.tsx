@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { EnvelopeSimple, Check, ArrowLeft, ArrowRight } from '@phosphor-icons/react'
-import CastLineCTA from '@/components/cast-line-cta'
+import { EnvelopeSimple, Check, ArrowLeft } from '@phosphor-icons/react'
+import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function SMTPRevivalPage() {
   return (
@@ -12,7 +12,7 @@ export default function SMTPRevivalPage() {
         <div className="from-stream-blue via-deep-water to-deep-water dark:from-deep-water dark:via-deep-water/90 absolute inset-0 bg-gradient-to-br dark:to-black" />
         <div className="absolute inset-0 opacity-10 dark:opacity-20">
           <div className="bg-current-teal/20 absolute top-1/4 right-1/3 h-96 w-96 animate-pulse rounded-full blur-3xl" />
-          <div className="bg-stream-blue/20 animation-delay-2000 absolute bottom-1/2 left-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
+          <div className="bg-dark-border/20 animation-delay-2000 absolute bottom-1/2 left-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
         </div>
       </div>
 
@@ -22,10 +22,10 @@ export default function SMTPRevivalPage() {
           <div className="mb-8 text-casting-green flex justify-center">
             <EnvelopeSimple size={64} weight="regular" />
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
             Email That Doesn&apos;t Suck
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Because your Shopify emails shouldn&apos;t look like everyone
             else&apos;s Shopify emails.
           </p>
@@ -35,16 +35,16 @@ export default function SMTPRevivalPage() {
       {/* The Problem Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               The Problem
             </h2>
             <div className="prose prose-lg dark:prose-invert">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Your email list is gold. But you&apos;re panning with a kitchen
                 strainer:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-3">
+              <ul className="text-muted-foreground space-y-3">
                 <li>Generic templates that scream &apos;automated&apos;</li>
                 <li>One-size-fits-all messaging</li>
                 <li>No segmentation strategy</li>
@@ -63,11 +63,11 @@ export default function SMTPRevivalPage() {
       {/* What We Do Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-8 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-8 text-3xl font-bold">
               What We Do
             </h2>
-            <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+            <p className="text-secondary mb-8 text-lg">
               We rebuild your email program from the ground up:
             </p>
 
@@ -86,7 +86,7 @@ export default function SMTPRevivalPage() {
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <span className="bg-casting-green mt-1.5 block h-2 w-2 flex-shrink-0 rounded-full" />
-                      <span className="text-stream-blue dark:text-terminal-text/80">
+                      <span className="text-secondary">
                         {item}
                       </span>
                     </li>
@@ -109,7 +109,7 @@ export default function SMTPRevivalPage() {
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <span className="bg-casting-green mt-1.5 block h-2 w-2 flex-shrink-0 rounded-full" />
-                      <span className="text-stream-blue dark:text-terminal-text/80">
+                      <span className="text-secondary">
                         {item}
                       </span>
                     </li>
@@ -131,7 +131,7 @@ export default function SMTPRevivalPage() {
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <span className="bg-casting-green mt-1.5 block h-2 w-2 flex-shrink-0 rounded-full" />
-                      <span className="text-stream-blue dark:text-terminal-text/80">
+                      <span className="text-secondary">
                         {item}
                       </span>
                     </li>
@@ -146,8 +146,8 @@ export default function SMTPRevivalPage() {
       {/* The Process Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-8 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-8 text-3xl font-bold">
               The Process
             </h2>
             <div className="space-y-4">
@@ -163,7 +163,7 @@ export default function SMTPRevivalPage() {
                   <div className="from-current-teal to-stream-blue flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br font-mono text-lg font-bold text-white">
                     {item.step}
                   </div>
-                  <p className="text-stream-blue dark:text-terminal-text/80">
+                  <p className="text-secondary">
                     {item.task}
                   </p>
                 </div>
@@ -176,8 +176,8 @@ export default function SMTPRevivalPage() {
       {/* What's Included Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               What&apos;s Included
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -191,7 +191,7 @@ export default function SMTPRevivalPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <Check size={20} weight="regular" className="text-casting-green mt-1 flex-shrink-0" />
-                  <span className="text-stream-blue dark:text-terminal-text/80">
+                  <span className="text-secondary">
                     {item}
                   </span>
                 </div>
@@ -205,13 +205,13 @@ export default function SMTPRevivalPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="from-current-teal to-stream-blue overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
+            <div className="bg-surface/95 dark:bg-dark-bg/95 rounded-xl p-8 backdrop-blur-md md:p-12">
               <div className="text-center">
-                <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+                <h2 className="text-primary mb-6 text-3xl font-bold">
                   Investment
                 </h2>
                 <div className="mb-8 space-y-2">
-                  <p className="text-stream-blue dark:text-terminal-text/80 text-2xl">
+                  <p className="text-secondary text-2xl">
                     Setup
                   </p>
                   <p className="text-casting-green font-mono text-5xl font-bold">
@@ -219,7 +219,7 @@ export default function SMTPRevivalPage() {
                   </p>
                 </div>
                 <div className="mb-8 space-y-2">
-                  <p className="text-stream-blue dark:text-terminal-text/80 text-2xl">
+                  <p className="text-secondary text-2xl">
                     Monthly Maintenance
                   </p>
                   <p className="text-casting-green font-mono text-5xl font-bold">
@@ -237,7 +237,7 @@ export default function SMTPRevivalPage() {
       <section className="relative px-4 pb-24 text-center sm:px-6 lg:px-8">
         <Link
           href="/services"
-          className="text-morning-mist hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
+          className="text-primary hover:text-casting-green dark:text-primary dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
         >
           <ArrowLeft size={20} weight="regular" />
           Back to all services

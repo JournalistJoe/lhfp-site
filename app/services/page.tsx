@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Funnel, Lightning, Terminal, EnvelopeSimple, ArrowRight } from '@phosphor-icons/react'
+import { Funnel, Lightning, Terminal, EnvelopeSimple } from '@phosphor-icons/react'
 import { CastLineCTA } from '@/components/cast-line-cta'
 
 const services = [
@@ -62,13 +62,13 @@ export default function ServicesPage() {
 
       {/* Content */}
       <section className="relative px-4 py-24 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-6xl">
           {/* Header */}
           <div className="mb-20 text-center">
-            <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+            <h1 className="text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
               How We Can Help
             </h1>
-            <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+            <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
               Tools crafted for the specific waters you&apos;re fishing. No
               templates. No buzzwords. Just thoughtful solutions.
             </p>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
               <Link
                 key={service.id}
                 href={service.href}
-                className="group dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 relative overflow-hidden rounded-2xl bg-white/90 p-8 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl md:p-12 dark:ring-1"
+                className="group dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 relative overflow-hidden rounded-2xl bg-surface p-8 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl md:p-12 dark:ring-1"
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
@@ -91,14 +91,14 @@ export default function ServicesPage() {
                 />
 
                 <div className="relative z-10">
-                  <h2 className="text-deep-water dark:text-terminal-text mb-3 text-3xl font-bold flex items-center gap-3">
+                  <h2 className="text-primary mb-3 text-3xl font-bold flex items-center gap-3">
                     <service.Icon size={40} weight="regular" className="text-casting-green flex-shrink-0" />
                     {service.title}
                   </h2>
-                  <p className="text-stream-blue dark:text-terminal-text/70 mb-4 text-lg italic">
+                  <p className="text-muted-foreground mb-4 text-lg italic">
                     &ldquo;{service.tagline}&rdquo;
                   </p>
-                  <p className="text-river-stone dark:text-terminal-text/60 mb-6">
+                  <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
@@ -129,10 +129,10 @@ export default function ServicesPage() {
 
           {/* Bottom CTA */}
           <div className="mt-20 text-center">
-            <h3 className="text-morning-mist dark:text-terminal-text mb-6 text-2xl font-semibold">
+            <h3 className="text-primary mb-6 text-2xl font-semibold">
               Not sure which service you need?
             </h3>
-            <p className="text-river-stone dark:text-terminal-text/70 mb-8 text-lg">
+            <p className="text-muted-foreground mb-8 text-lg">
               Start with a conversation. We&apos;ll help you figure out the
               right approach.
             </p>

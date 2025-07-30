@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowLeft, Package, Eye, Lightbulb, Rocket, ChartLine, Quote } from '@phosphor-icons/react'
+import { ArrowLeft, Package, Eye, Lightbulb, Rocket, ChartLine, Quotes } from '@phosphor-icons/react'
 import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function SustainableFoodBrandCaseStudy() {
@@ -20,7 +20,7 @@ export default function SustainableFoodBrandCaseStudy() {
         <div className="container mx-auto max-w-4xl">
           <Link
             href="/case-studies"
-            className="text-morning-mist hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green inline-flex items-center gap-2 font-medium transition-colors"
+            className="text-primary hover:text-casting-green dark:text-primary dark:hover:text-casting-green inline-flex items-center gap-2 font-medium transition-colors"
           >
             <ArrowLeft size={20} weight="regular" />
             Back to Case Studies
@@ -36,18 +36,18 @@ export default function SustainableFoodBrandCaseStudy() {
               <Package size={48} weight="regular" />
             </div>
             <div>
-              <p className="text-stream-blue dark:text-terminal-text/70 text-lg">
+              <p className="text-muted-foreground text-lg">
                 Pacific Harvest Co.
               </p>
-              <p className="text-river-stone dark:text-terminal-text/50">
+              <p className="text-muted-foreground">
                 Food & Beverage
               </p>
             </div>
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+          <h1 className="text-primary dark:text-primary mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
             10x Email Revenue for Sustainable Food Brand
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 text-xl md:text-2xl">
+          <p className="text-secondary text-xl md:text-2xl">
             How we transformed a dormant email list into a revenue-generating
             machine through strategic segmentation and authentic storytelling.
           </p>
@@ -57,29 +57,29 @@ export default function SustainableFoodBrandCaseStudy() {
       {/* Problem Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
             <div className="mb-6 flex items-center gap-3">
               <Eye size={32} weight="regular" className="text-casting-green" />
-              <h2 className="text-deep-water dark:text-terminal-text text-3xl font-bold">
+              <h2 className="text-primary dark:text-primary text-3xl font-bold">
                 The Problem
               </h2>
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Pacific Harvest Co. had built an email list of 15,000
                 subscribers over five years. But their monthly email revenue was
                 stuck below $2,000. They were sending one newsletter per month
                 to their entire list, with generic product updates and
                 occasional discount codes.
               </p>
-              <p className="text-stream-blue dark:text-terminal-text/80 mt-4">
+              <p className="text-secondary mt-4">
                 The real problem? They were treating all subscribers the same,
                 ignoring the rich data they had about customer preferences,
                 purchase history, and engagement patterns. Their sustainable
                 story — the very thing that attracted customers — was buried in
                 product specs.
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 mt-6 space-y-2">
+              <ul className="text-muted-foreground mt-6 space-y-2">
                 <li>15% average open rate (industry average: 25%)</li>
                 <li>2% click-through rate</li>
                 <li>Less than $2K monthly email revenue</li>
@@ -93,51 +93,51 @@ export default function SustainableFoodBrandCaseStudy() {
       {/* Observation Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
             <div className="mb-6 flex items-center gap-3">
               <Lightbulb size={32} weight="regular" className="text-casting-green" />
-              <h2 className="text-deep-water dark:text-terminal-text text-3xl font-bold">
+              <h2 className="text-primary dark:text-primary text-3xl font-bold">
                 Our Observation
               </h2>
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 We spent two weeks analyzing their data, customer feedback, and
                 purchase patterns. What we found:
               </p>
               <div className="mt-6 grid gap-6 md:grid-cols-2">
-                <div className="bg-morning-mist/10 dark:bg-deep-water/30 rounded-lg p-6">
-                  <h3 className="text-deep-water dark:text-terminal-text mb-2 text-xl font-semibold">
+                <div className="bg-light-surface/10 dark:bg-background/30 rounded-lg p-6">
+                  <h3 className="text-primary dark:text-primary mb-2 text-xl font-semibold">
                     Three Distinct Segments
                   </h3>
-                  <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     Health-conscious families, eco-warriors, and gourmet food
                     enthusiasts had completely different motivations.
                   </p>
                 </div>
-                <div className="bg-morning-mist/10 dark:bg-deep-water/30 rounded-lg p-6">
-                  <h3 className="text-deep-water dark:text-terminal-text mb-2 text-xl font-semibold">
+                <div className="bg-light-surface/10 dark:bg-background/30 rounded-lg p-6">
+                  <h3 className="text-primary dark:text-primary mb-2 text-xl font-semibold">
                     Story Disconnect
                   </h3>
-                  <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     Their incredible sustainability story was hidden. Customers
                     wanted to know about the farmers, not just the products.
                   </p>
                 </div>
-                <div className="bg-morning-mist/10 dark:bg-deep-water/30 rounded-lg p-6">
-                  <h3 className="text-deep-water dark:text-terminal-text mb-2 text-xl font-semibold">
+                <div className="bg-light-surface/10 dark:bg-background/30 rounded-lg p-6">
+                  <h3 className="text-primary dark:text-primary mb-2 text-xl font-semibold">
                     Purchase Patterns
                   </h3>
-                  <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     Most customers bought seasonally, but emails ignored these
                     natural cycles.
                   </p>
                 </div>
-                <div className="bg-morning-mist/10 dark:bg-deep-water/30 rounded-lg p-6">
-                  <h3 className="text-deep-water dark:text-terminal-text mb-2 text-xl font-semibold">
+                <div className="bg-light-surface/10 dark:bg-background/30 rounded-lg p-6">
+                  <h3 className="text-primary dark:text-primary mb-2 text-xl font-semibold">
                     Mobile Blindness
                   </h3>
-                  <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     78% opened on mobile, but emails were designed for desktop.
                   </p>
                 </div>
@@ -150,25 +150,25 @@ export default function SustainableFoodBrandCaseStudy() {
       {/* Solution Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
             <div className="mb-6 flex items-center gap-3">
               <Rocket size={32} weight="regular" className="text-casting-green" />
-              <h2 className="text-deep-water dark:text-terminal-text text-3xl font-bold">
+              <h2 className="text-primary dark:text-primary text-3xl font-bold">
                 The Solution
               </h2>
             </div>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 We rebuilt their email program from the ground up:
               </p>
 
-              <h3 className="text-deep-water dark:text-terminal-text mb-4 mt-8 text-2xl font-semibold">
+              <h3 className="text-primary dark:text-primary mb-4 mt-8 text-2xl font-semibold">
                 1. Strategic Segmentation
               </h3>
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Created three core segments with distinct messaging:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-2">
+              <ul className="text-muted-foreground space-y-2">
                 <li>
                   <strong>Health Heroes:</strong> Focus on nutritional benefits
                   and family wellness
@@ -183,13 +183,13 @@ export default function SustainableFoodBrandCaseStudy() {
                 </li>
               </ul>
 
-              <h3 className="text-deep-water dark:text-terminal-text mb-4 mt-8 text-2xl font-semibold">
+              <h3 className="text-primary dark:text-primary mb-4 mt-8 text-2xl font-semibold">
                 2. Automated Flows
               </h3>
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Built five automated email sequences:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-2">
+              <ul className="text-muted-foreground space-y-2">
                 <li>Welcome series (5 emails introducing the brand story)</li>
                 <li>Post-purchase flow (recipe ideas based on purchase)</li>
                 <li>Win-back campaign (re-engage dormant subscribers)</li>
@@ -197,26 +197,26 @@ export default function SustainableFoodBrandCaseStudy() {
                 <li>VIP program (for top 20% of customers)</li>
               </ul>
 
-              <h3 className="text-deep-water dark:text-terminal-text mb-4 mt-8 text-2xl font-semibold">
+              <h3 className="text-primary dark:text-primary mb-4 mt-8 text-2xl font-semibold">
                 3. Mobile-First Design
               </h3>
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Completely redesigned templates with:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-2">
+              <ul className="text-muted-foreground space-y-2">
                 <li>Single-column layouts</li>
                 <li>Larger fonts and touch-friendly buttons</li>
                 <li>Compressed images for faster loading</li>
                 <li>Preview text optimization</li>
               </ul>
 
-              <h3 className="text-deep-water dark:text-terminal-text mb-4 mt-8 text-2xl font-semibold">
+              <h3 className="text-primary dark:text-primary mb-4 mt-8 text-2xl font-semibold">
                 4. Story-First Content
               </h3>
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Shifted focus from products to stories:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-2">
+              <ul className="text-muted-foreground space-y-2">
                 <li>Farmer spotlights and behind-the-scenes content</li>
                 <li>Sustainability impact reports</li>
                 <li>Customer success stories</li>
@@ -231,7 +231,7 @@ export default function SustainableFoodBrandCaseStudy() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="from-casting-green to-current-teal overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
+            <div className="dark:bg-background/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
               <div className="mb-8 flex items-center gap-3">
                 <ChartLine size={32} weight="regular" className="text-white" />
                 <h2 className="text-3xl font-bold text-white">The Results</h2>
@@ -291,17 +291,17 @@ export default function SustainableFoodBrandCaseStudy() {
       {/* Testimonial Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <Quote size={48} weight="regular" className="text-casting-green mb-6" />
-            <blockquote className="text-stream-blue dark:text-terminal-text/90 mb-6 text-xl italic">
-              "LHFP didn't just fix our email program — they helped us
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <Quotes size={48} weight="regular" className="text-casting-green mb-6" />
+            <blockquote className="text-secondary mb-6 text-xl italic">
+              &ldquo;LHFP didn&apos;t just fix our email program — they helped us
               rediscover our story. Our customers now feel like part of our
               mission, not just names on a list. The revenue growth is
-              fantastic, but the community we've built is priceless."
+              fantastic, but the community we&apos;ve built is priceless.&rdquo;
             </blockquote>
-            <cite className="text-deep-water dark:text-terminal-text not-italic">
+            <cite className="text-primary dark:text-primary not-italic">
               <p className="font-semibold">Sarah Chen</p>
-              <p className="text-river-stone dark:text-terminal-text/70 text-sm">
+              <p className="text-muted-foreground text-sm">
                 Founder, Pacific Harvest Co.
               </p>
             </cite>
@@ -312,17 +312,17 @@ export default function SustainableFoodBrandCaseStudy() {
       {/* CTA Section */}
       <section className="relative px-4 pb-24 text-center sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <h3 className="text-morning-mist dark:text-terminal-text mb-6 text-2xl font-semibold">
+          <h3 className="text-primary dark:text-primary mb-6 text-2xl font-semibold">
             Ready to transform your email program?
           </h3>
-          <p className="text-river-stone dark:text-terminal-text/70 mb-8 text-lg">
-            Let's talk about how we can help you connect with your customers.
+          <p className="text-muted-foreground mb-8 text-lg">
+            Let&apos;s talk about how we can help you connect with your customers.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <CastLineCTA />
             <Link
               href="/services/smtp-revival"
-              className="text-stream-blue hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green font-medium underline-offset-4 transition-colors hover:underline"
+              className="text-secondary hover:text-casting-green dark:text-primary dark:hover:text-casting-green font-medium underline-offset-4 transition-colors hover:underline"
             >
               Learn about SMTP Revival
             </Link>

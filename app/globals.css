@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Crimson+Pro:wght@400;600&display=swap');
 
 @theme {
+  /* Core colors */
   --color-deep-water: #0a1628;
   --color-stream-blue: #1e3a5f;
   --color-morning-mist: #f7f9fb;
@@ -15,6 +16,22 @@
   --color-dark-card: #1e293b;
   --color-dark-border: #334155;
   --color-code-border: #374151;
+  
+  /* Light mode specific */
+  --color-light-bg: #ffffff;
+  --color-light-surface: #f8fafc;
+  --color-light-text-primary: #0f172a;
+  --color-light-text-secondary: #475569;
+  --color-light-text-muted: #64748b;
+  --color-light-border: #e2e8f0;
+  
+  /* Dark mode specific */
+  --color-dark-bg: #0a0f1b;
+  --color-dark-surface: #141925;
+  --color-dark-text-primary: #f1f5f9;
+  --color-dark-text-secondary: #cbd5e1;
+  --color-dark-text-muted: #94a3b8;
+  --color-dark-border-subtle: #1e293b;
 }
 
 * {
@@ -26,8 +43,8 @@ html {
 }
 
 body {
-  background-color: var(--color-morning-mist);
-  color: var(--color-deep-water);
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text-primary);
   font-family: 'Inter', system-ui, sans-serif;
   font-feature-settings:
     'rlig' 1,
@@ -37,8 +54,8 @@ body {
 }
 
 .dark body {
-  background-color: var(--color-deep-water);
-  color: var(--color-terminal-text);
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text-primary);
 }
 
 /* Custom scrollbar for dark mode */
@@ -132,18 +149,70 @@ code {
   background-color: var(--color-fly-orange);
 }
 
+/* New light mode utility classes */
+.text-light-text-primary {
+  color: var(--color-light-text-primary);
+}
+.text-light-text-secondary {
+  color: var(--color-light-text-secondary);
+}
+.text-light-text-muted {
+  color: var(--color-light-text-muted);
+}
+.bg-light-bg {
+  background-color: var(--color-light-bg);
+}
+.bg-light-surface {
+  background-color: var(--color-light-surface);
+}
+.border-light-border {
+  border-color: var(--color-light-border);
+}
+
+/* New dark mode utility classes */
+.text-dark-text-primary {
+  color: var(--color-dark-text-primary);
+}
+.text-dark-text-secondary {
+  color: var(--color-dark-text-secondary);
+}
+.text-dark-text-muted {
+  color: var(--color-dark-text-muted);
+}
+.bg-dark-bg {
+  background-color: var(--color-dark-bg);
+}
+.bg-dark-surface {
+  background-color: var(--color-dark-surface);
+}
+.border-dark-border-subtle {
+  border-color: var(--color-dark-border-subtle);
+}
+
 /* Utility classes */
 @layer utilities {
   .text-muted-foreground {
-    @apply text-river-stone dark:text-terminal-text/60;
+    @apply text-light-text-muted dark:text-dark-text-muted;
   }
 
   .border-card-border {
-    @apply border-river-stone dark:border-dark-border;
+    @apply border-light-border dark:border-dark-border;
   }
 
   .bg-background {
-    @apply bg-morning-mist dark:bg-deep-water;
+    @apply bg-light-bg dark:bg-dark-bg;
+  }
+  
+  .bg-surface {
+    @apply bg-light-surface dark:bg-dark-surface;
+  }
+  
+  .text-primary {
+    @apply text-light-text-primary dark:text-dark-text-primary;
+  }
+  
+  .text-secondary {
+    @apply text-light-text-secondary dark:text-dark-text-secondary;
   }
 }
 

@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Terminal, Zap, CheckCircle, ArrowLeft, ArrowRight } from '@phosphor-icons/react'
-import CastLineCTA from '@/components/cast-line-cta'
+import { Terminal, Lightning, CheckCircle, ArrowLeft } from '@phosphor-icons/react'
+import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function SudoMakeMoneyPage() {
   return (
@@ -22,10 +22,10 @@ export default function SudoMakeMoneyPage() {
           <div className="mb-8 text-casting-green flex justify-center">
             <Terminal size={64} weight="regular" />
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 font-mono text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary mb-6 font-mono text-5xl font-bold md:text-6xl lg:text-7xl">
             sudo make money
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Turn repetitive tasks into automated workflows. No coding required
             (we&apos;ll handle that part).
           </p>
@@ -35,15 +35,15 @@ export default function SudoMakeMoneyPage() {
       {/* The Problem Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               The Problem
             </h2>
             <div className="prose prose-lg dark:prose-invert">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 You&apos;re drowning in repetitive tasks:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-3">
+              <ul className="text-muted-foreground space-y-3">
                 <li>Manually moving data between apps</li>
                 <li>Copy-pasting customer information</li>
                 <li>Sending the same emails over and over</li>
@@ -62,11 +62,11 @@ export default function SudoMakeMoneyPage() {
       {/* Our Session Structure Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-8 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-8 text-3xl font-bold">
               Our Session Structure
             </h2>
-            <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+            <p className="text-secondary mb-8 text-lg">
               In our 3-hour deep dive, we&apos;ll:
             </p>
             <div className="space-y-8">
@@ -111,7 +111,7 @@ export default function SudoMakeMoneyPage() {
                     {session.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="bg-casting-green mt-1.5 block h-2 w-2 flex-shrink-0 rounded-full" />
-                        <span className="text-stream-blue dark:text-terminal-text/80">
+                        <span className="text-secondary">
                           {item}
                         </span>
                       </li>
@@ -127,8 +127,8 @@ export default function SudoMakeMoneyPage() {
       {/* Common Automations Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               Common Automations We Design
             </h2>
             <div className="space-y-4">
@@ -143,8 +143,8 @@ export default function SudoMakeMoneyPage() {
                   key={flow}
                   className="from-casting-green/5 flex items-center gap-3 rounded-lg bg-gradient-to-r to-transparent p-4"
                 >
-                  <Zap size={20} weight="regular" className="text-casting-green flex-shrink-0" />
-                  <span className="text-stream-blue dark:text-terminal-text/80 font-mono text-sm">
+                  <Lightning size={20} weight="regular" className="text-casting-green flex-shrink-0" />
+                  <span className="text-secondary font-mono text-sm">
                     {flow}
                   </span>
                 </div>
@@ -157,8 +157,8 @@ export default function SudoMakeMoneyPage() {
       {/* What You Leave With Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               What You Leave With
             </h2>
             <ul className="space-y-4">
@@ -171,7 +171,7 @@ export default function SudoMakeMoneyPage() {
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <CheckCircle size={20} weight="regular" className="text-casting-green mt-1 flex-shrink-0" />
-                  <span className="text-stream-blue dark:text-terminal-text/80">
+                  <span className="text-secondary">
                     {item}
                   </span>
                 </li>
@@ -185,15 +185,15 @@ export default function SudoMakeMoneyPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="from-fly-orange to-casting-green overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
+            <div className="bg-surface/95 dark:bg-dark-bg/95 rounded-xl p-8 backdrop-blur-md md:p-12">
               <div className="text-center">
-                <h2 className="text-deep-water dark:text-terminal-text mb-2 text-3xl font-bold">
+                <h2 className="text-primary mb-2 text-3xl font-bold">
                   Investment
                 </h2>
                 <p className="text-casting-green mb-6 font-mono text-6xl font-bold">
                   $750
                 </p>
-                <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+                <p className="text-secondary mb-8 text-lg">
                   For 3-hour strategy session
                 </p>
                 <CastLineCTA text="Book Your Session" />
@@ -207,7 +207,7 @@ export default function SudoMakeMoneyPage() {
       <section className="relative px-4 pb-24 text-center sm:px-6 lg:px-8">
         <Link
           href="/services"
-          className="text-morning-mist hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
+          className="text-primary hover:text-casting-green dark:text-primary dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
         >
           <ArrowLeft size={20} weight="regular" />
           Back to all services

@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Lightning, Gauge, Code, Paintbrush, Rocket, Crosshair, EnvelopeSimple, Unlock, Check, ArrowLeft, ArrowRight } from '@phosphor-icons/react'
-import CastLineCTA from '@/components/cast-line-cta'
+import { Lightning, Gauge, PaintBrush, Crosshair, EnvelopeSimple, LockSimpleOpen, Check, ArrowLeft } from '@phosphor-icons/react'
+import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function TerminalVelocityPage() {
   return (
@@ -22,10 +22,10 @@ export default function TerminalVelocityPage() {
           <div className="mb-8 text-casting-green flex justify-center">
             <Lightning size={64} weight="regular" />
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
             Websites Built Different
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Claude-powered development. Human-centered design. Actually captures
             data.
           </p>
@@ -35,16 +35,16 @@ export default function TerminalVelocityPage() {
       {/* The Problem Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               The Problem
             </h2>
             <div className="prose prose-lg dark:prose-invert">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Your Squarespace site looks fine. Your Wix site works okay. But
                 they&apos;re bleeding opportunities:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-3">
+              <ul className="text-muted-foreground space-y-3">
                 <li>Generic templates everyone recognizes</li>
                 <li>Bloated code slowing everything down</li>
                 <li>Limited data capture capabilities</li>
@@ -62,18 +62,18 @@ export default function TerminalVelocityPage() {
       {/* Our Approach Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               Our Approach
             </h2>
-            <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+            <p className="text-secondary mb-8 text-lg">
               We use Claude Code and modern frameworks to build exactly what you
               need:
             </p>
             <div className="grid gap-6">
               {[
                 {
-                  Icon: Paintbrush,
+                  Icon: PaintBrush,
                   title: 'Custom design that matches your brand',
                   description: 'Not a template',
                 },
@@ -93,7 +93,7 @@ export default function TerminalVelocityPage() {
                   description: 'Integrated from day one',
                 },
                 {
-                  Icon: Unlock,
+                  Icon: LockSimpleOpen,
                   title: 'You own the code',
                   description: 'No rental fees, ever',
                 },
@@ -103,10 +103,10 @@ export default function TerminalVelocityPage() {
                     <feature.Icon size={32} weight="regular" />
                   </div>
                   <div>
-                    <h3 className="text-deep-water dark:text-terminal-text mb-1 font-semibold">
+                    <h3 className="text-primary mb-1 font-semibold">
                       {feature.title}
                     </h3>
-                    <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {feature.description}
                     </p>
                   </div>
@@ -120,8 +120,8 @@ export default function TerminalVelocityPage() {
       {/* What's Included Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               What&apos;s Included
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -137,7 +137,7 @@ export default function TerminalVelocityPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <Check size={20} weight="regular" className="text-casting-green mt-1 flex-shrink-0" />
-                  <span className="text-stream-blue dark:text-terminal-text/80">
+                  <span className="text-secondary">
                     {item}
                   </span>
                 </div>
@@ -150,8 +150,8 @@ export default function TerminalVelocityPage() {
       {/* Technology Stack Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               Technology Stack
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -180,7 +180,7 @@ export default function TerminalVelocityPage() {
                   <h3 className="text-casting-green mb-1 font-mono font-semibold">
                     {tech.name}
                   </h3>
-                  <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     {tech.description}
                   </p>
                 </div>
@@ -194,18 +194,18 @@ export default function TerminalVelocityPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="from-casting-green to-current-teal overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
+            <div className="bg-surface/95 dark:bg-dark-bg/95 rounded-xl p-8 backdrop-blur-md md:p-12">
               <div className="text-center">
-                <h2 className="text-deep-water dark:text-terminal-text mb-2 text-3xl font-bold">
+                <h2 className="text-primary mb-2 text-3xl font-bold">
                   Investment
                 </h2>
                 <p className="text-casting-green mb-6 font-mono text-5xl font-bold">
                   $3,500-5,000
                 </p>
-                <p className="text-stream-blue dark:text-terminal-text/80 mb-2 text-lg">
+                <p className="text-secondary mb-2 text-lg">
                   Depending on complexity
                 </p>
-                <p className="text-stream-blue dark:text-terminal-text/70 mb-8">
+                <p className="text-muted-foreground mb-8">
                   Timeline: 2-3 weeks
                 </p>
                 <CastLineCTA text="Start Building" />
@@ -219,7 +219,7 @@ export default function TerminalVelocityPage() {
       <section className="relative px-4 pb-24 text-center sm:px-6 lg:px-8">
         <Link
           href="/services"
-          className="text-morning-mist hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
+          className="text-primary hover:text-casting-green dark:text-primary dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
         >
           <ArrowLeft size={20} weight="regular" />
           Back to all services

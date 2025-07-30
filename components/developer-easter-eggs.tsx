@@ -19,7 +19,7 @@ export function DeveloperEasterEggs() {
       'color: #0891B2; font-size: 14px; font-family: monospace;'
     )
     console.log(
-      "%cIf you're looking for like-minded developers who care about craft,\ncast a line: hello@lhfp.consulting",
+      "%cIf you're looking for like-minded developers who care about craft,\ncast a line: joey@lhfp.help",
       'color: #1E3A5F; font-size: 14px; font-family: monospace;'
     )
     console.log(
@@ -93,8 +93,8 @@ export function DeveloperEasterEggs() {
           exit={{ opacity: 0 }}
           className="fixed bottom-4 right-4 z-50"
         >
-          <div className="bg-deep-water/90 backdrop-blur-sm rounded-full p-2">
-            <div className="w-24 h-2 bg-stream-blue/30 rounded-full overflow-hidden">
+          <div className="bg-dark-surface/90 backdrop-blur-sm rounded-full p-2">
+            <div className="w-24 h-2 bg-dark-border/30 rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-casting-green"
                 animate={{ width: `${konamiProgress}%` }}
@@ -115,7 +115,7 @@ export function DeveloperEasterEggs() {
             transition={{ type: 'spring', stiffness: 200 }}
             className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
           >
-            <div className="bg-deep-water/95 backdrop-blur-md rounded-2xl p-12 text-center">
+            <div className="bg-dark-surface/95 backdrop-blur-md rounded-2xl p-12 text-center">
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 0.5, repeat: Infinity }}
@@ -123,17 +123,17 @@ export function DeveloperEasterEggs() {
               >
                 <Fish size={80} weight="fill" />
               </motion.div>
-              <h2 className="text-terminal-text text-3xl font-bold mb-4 font-mono">
+              <h2 className="text-primary text-3xl font-bold mb-4 font-mono">
                 Achievement Unlocked!
               </h2>
-              <p className="text-terminal-text/80 text-lg mb-2">
-                "Up, Up, Down, Down, Left, Right, Left, Right, B, A"
+              <p className="text-secondary text-lg mb-2">
+                &ldquo;Up, Up, Down, Down, Left, Right, Left, Right, B, A&rdquo;
               </p>
               <p className="text-casting-green font-mono">
                 You found the secret fish! 🎣
               </p>
-              <p className="text-terminal-text/60 text-sm mt-4">
-                Email us with "Konami Fish" for a surprise
+              <p className="text-muted-foreground text-sm mt-4">
+                Email us with &ldquo;Konami Fish&rdquo; for a surprise
               </p>
             </div>
           </motion.div>

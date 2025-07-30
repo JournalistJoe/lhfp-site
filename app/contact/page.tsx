@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { ArrowRight, Check, ArrowLeft } from '@phosphor-icons/react'
-import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function ContactPage() {
   const [formStep, setFormStep] = useState(0)
@@ -102,31 +101,37 @@ export default function ContactPage() {
       <section className="relative px-4 py-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-2xl">
           <div className="mb-16 text-center">
-            <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl">
+            <h1 className="text-primary dark:text-primary mb-6 text-5xl font-bold md:text-6xl">
               Cast a Line
             </h1>
-            <p className="text-river-stone dark:text-terminal-text/80 text-xl">
+            <p className="text-secondary text-xl">
               Let&apos;s start a conversation about your project
             </p>
           </div>
 
           {isSuccess ? (
-            <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 text-center backdrop-blur-md md:p-12 dark:ring-1">
+            <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 text-center backdrop-blur-md md:p-12 dark:ring-1">
               <div className="mb-6 flex justify-center text-casting-green">
                 <Check size={64} weight="regular" />
               </div>
-              <h2 className="text-deep-water dark:text-terminal-text mb-4 text-3xl font-bold">
+              <h2 className="text-primary dark:text-primary mb-4 text-3xl font-bold">
                 Message Sent!
               </h2>
-              <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+              <p className="text-secondary mb-8 text-lg">
                 We&apos;ll get back to you within 24 hours. In the meantime, feel
                 free to explore our philosophy or check out our services.
               </p>
-              <CastLineCTA text="Send Another Message" onClick={() => setIsSuccess(false)} />
+              <button
+                onClick={() => setIsSuccess(false)}
+                className="bg-casting-green hover:bg-casting-green/90 text-white inline-flex items-center gap-3 rounded-md px-8 py-4 font-medium transition-all transform hover:scale-105"
+              >
+                Send Another Message
+                <ArrowRight size={20} weight="bold" />
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
+              <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
                 {/* Progress indicator */}
                 <div className="mb-8 flex justify-between">
                   {[0, 1, 2, 3].map((step) => (
@@ -137,7 +142,7 @@ export default function ContactPage() {
                       } ${
                         step <= formStep
                           ? 'bg-casting-green'
-                          : 'bg-river-stone/20 dark:bg-terminal-text/20'
+                          : 'bg-card-border/20 dark:bg-card-border/20'
                       }`}
                     />
                   ))}
@@ -146,11 +151,11 @@ export default function ContactPage() {
                 {/* Step 0: Basic Info */}
                 {formStep === 0 && (
                   <div className="space-y-6">
-                    <h2 className="text-deep-water dark:text-terminal-text mb-6 text-2xl font-bold">
+                    <h2 className="text-primary dark:text-primary mb-6 text-2xl font-bold">
                       First, let&apos;s get to know you
                     </h2>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-2 block font-medium">
+                      <label className="text-secondary mb-2 block font-medium">
                         What should we call you?
                       </label>
                       <input
@@ -158,12 +163,12 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => updateFormData('name', e.target.value)}
-                        className="dark:bg-deep-water/50 dark:border-dark-border w-full rounded-lg border border-river-stone/20 bg-white/50 px-4 py-3 backdrop-blur-sm focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20"
+                        className="bg-white dark:bg-dark-surface text-primary dark:text-white dark:border-dark-border w-full rounded-lg border border-light-border px-4 py-3 focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20 transition-all"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-2 block font-medium">
+                      <label className="text-secondary mb-2 block font-medium">
                         Email address
                       </label>
                       <input
@@ -171,19 +176,19 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => updateFormData('email', e.target.value)}
-                        className="dark:bg-deep-water/50 dark:border-dark-border w-full rounded-lg border border-river-stone/20 bg-white/50 px-4 py-3 backdrop-blur-sm focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20"
+                        className="bg-white dark:bg-dark-surface text-primary dark:text-white dark:border-dark-border w-full rounded-lg border border-light-border px-4 py-3 focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20 transition-all"
                         placeholder="you@company.com"
                       />
                     </div>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-2 block font-medium">
+                      <label className="text-secondary mb-2 block font-medium">
                         Company (optional)
                       </label>
                       <input
                         type="text"
                         value={formData.company}
                         onChange={(e) => updateFormData('company', e.target.value)}
-                        className="dark:bg-deep-water/50 dark:border-dark-border w-full rounded-lg border border-river-stone/20 bg-white/50 px-4 py-3 backdrop-blur-sm focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20"
+                        className="bg-white dark:bg-dark-surface text-primary dark:text-white dark:border-dark-border w-full rounded-lg border border-light-border px-4 py-3 focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20 transition-all"
                         placeholder="Your company name"
                       />
                     </div>
@@ -193,14 +198,14 @@ export default function ContactPage() {
                 {/* Step 1: Project Type */}
                 {formStep === 1 && (
                   <div className="space-y-6">
-                    <h2 className="text-deep-water dark:text-terminal-text mb-6 text-2xl font-bold">
+                    <h2 className="text-primary dark:text-primary mb-6 text-2xl font-bold">
                       What can we help you with?
                     </h2>
                     <div className="space-y-3">
                       {projectTypes.map((type) => (
                         <label
                           key={type.value}
-                          className="flex cursor-pointer items-center gap-3 rounded-lg border border-river-stone/20 p-4 transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
+                          className="flex cursor-pointer items-center gap-3 rounded-lg border border-card-border p-4 transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
                         >
                           <input
                             type="radio"
@@ -212,7 +217,7 @@ export default function ContactPage() {
                             }
                             className="text-casting-green focus:ring-casting-green"
                           />
-                          <span className="text-stream-blue dark:text-terminal-text">
+                          <span className="text-secondary">
                             {type.label}
                           </span>
                         </label>
@@ -224,18 +229,18 @@ export default function ContactPage() {
                 {/* Step 2: Budget & Timeline */}
                 {formStep === 2 && (
                   <div className="space-y-6">
-                    <h2 className="text-deep-water dark:text-terminal-text mb-6 text-2xl font-bold">
+                    <h2 className="text-primary dark:text-primary mb-6 text-2xl font-bold">
                       Let&apos;s talk logistics
                     </h2>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-3 block font-medium">
+                      <label className="text-secondary mb-3 block font-medium">
                         Budget range
                       </label>
                       <div className="grid grid-cols-2 gap-3">
                         {budgetRanges.map((range) => (
                           <label
                             key={range.value}
-                            className="flex cursor-pointer items-center gap-3 rounded-lg border border-river-stone/20 p-3 text-sm transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
+                            className="flex cursor-pointer items-center gap-3 rounded-lg border border-card-border p-3 text-sm transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
                           >
                             <input
                               type="radio"
@@ -247,7 +252,7 @@ export default function ContactPage() {
                               }
                               className="text-casting-green focus:ring-casting-green"
                             />
-                            <span className="text-stream-blue dark:text-terminal-text">
+                            <span className="text-secondary">
                               {range.label}
                             </span>
                           </label>
@@ -255,14 +260,14 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-3 block font-medium">
+                      <label className="text-secondary mb-3 block font-medium">
                         Timeline
                       </label>
                       <div className="grid grid-cols-2 gap-3">
                         {timelines.map((timeline) => (
                           <label
                             key={timeline.value}
-                            className="flex cursor-pointer items-center gap-3 rounded-lg border border-river-stone/20 p-3 text-sm transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
+                            className="flex cursor-pointer items-center gap-3 rounded-lg border border-card-border p-3 text-sm transition-all hover:border-casting-green dark:border-dark-border dark:hover:border-casting-green"
                           >
                             <input
                               type="radio"
@@ -274,7 +279,7 @@ export default function ContactPage() {
                               }
                               className="text-casting-green focus:ring-casting-green"
                             />
-                            <span className="text-stream-blue dark:text-terminal-text">
+                            <span className="text-secondary">
                               {timeline.label}
                             </span>
                           </label>
@@ -287,18 +292,18 @@ export default function ContactPage() {
                 {/* Step 3: Message */}
                 {formStep === 3 && (
                   <div className="space-y-6">
-                    <h2 className="text-deep-water dark:text-terminal-text mb-6 text-2xl font-bold">
+                    <h2 className="text-primary dark:text-primary mb-6 text-2xl font-bold">
                       Anything else we should know?
                     </h2>
                     <div>
-                      <label className="text-stream-blue dark:text-terminal-text mb-2 block font-medium">
+                      <label className="text-secondary mb-2 block font-medium">
                         Tell us more about your project
                       </label>
                       <textarea
                         value={formData.message}
                         onChange={(e) => updateFormData('message', e.target.value)}
                         rows={6}
-                        className="dark:bg-deep-water/50 dark:border-dark-border w-full rounded-lg border border-river-stone/20 bg-white/50 px-4 py-3 backdrop-blur-sm focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20"
+                        className="bg-white dark:bg-dark-surface text-primary dark:text-white dark:border-dark-border w-full rounded-lg border border-light-border px-4 py-3 focus:border-casting-green focus:outline-none focus:ring-2 focus:ring-casting-green/20 transition-all"
                         placeholder="Share any details, links, or specific challenges you're facing..."
                       />
                     </div>
@@ -311,7 +316,7 @@ export default function ContactPage() {
                     <button
                       type="button"
                       onClick={prevStep}
-                      className="text-stream-blue hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green flex items-center gap-2 font-medium transition-colors"
+                      className="text-secondary hover:text-casting-green dark:text-primary dark:hover:text-casting-green flex items-center gap-2 font-medium transition-colors"
                     >
                       <ArrowLeft size={20} weight="regular" />
                       Back

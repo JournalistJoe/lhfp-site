@@ -60,7 +60,7 @@ export function Navigation() {
   }, [pathname])
 
   return (
-    <header className="border-river-stone dark:border-dark-border dark:bg-deep-water/80 sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
+    <header className="border-card-border bg-surface/80 dark:bg-dark-surface/80 sticky top-0 z-50 w-full border-b backdrop-blur-sm">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -83,7 +83,7 @@ export function Navigation() {
                   'hover:text-casting-green font-mono text-sm transition-colors',
                   pathname === item.href
                     ? 'text-casting-green'
-                    : 'text-stream-blue dark:text-terminal-text opacity-80 hover:opacity-100'
+                    : 'text-secondary hover:text-primary'
                 )}
               >
                 {item.label}
@@ -93,13 +93,13 @@ export function Navigation() {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="bg-morning-mist dark:bg-stream-blue/20 hover:bg-river-stone dark:hover:bg-stream-blue/30 ml-4 rounded-lg p-2 transition-colors"
+              className="bg-light-border/30 dark:bg-stream-blue/20 hover:bg-light-border/50 dark:hover:bg-stream-blue/30 ml-4 rounded-lg p-2 transition-all hover:scale-105"
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? (
-                <Sun size={20} weight="regular" className="text-fly-orange" />
+                <Sun size={20} weight="bold" className="text-fly-orange" />
               ) : (
-                <Moon size={20} weight="regular" className="text-deep-water" />
+                <Moon size={20} weight="bold" className="text-stream-blue" />
               )}
             </button>
           </div>
@@ -108,13 +108,13 @@ export function Navigation() {
             {/* Mobile Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="bg-morning-mist dark:bg-stream-blue/20 hover:bg-river-stone dark:hover:bg-stream-blue/30 rounded-lg p-2 transition-colors"
+              className="bg-light-surface dark:bg-dark-surface hover:bg-light-border dark:hover:bg-dark-border-subtle rounded-lg p-2 transition-colors"
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? (
-                <Sun size={20} weight="regular" className="text-fly-orange" />
+                <Sun size={20} weight="bold" className="text-fly-orange" />
               ) : (
-                <Moon size={20} weight="regular" className="text-deep-water" />
+                <Moon size={20} weight="bold" className="text-stream-blue" />
               )}
             </button>
 
@@ -135,7 +135,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="border-river-stone dark:border-dark-border border-t md:hidden">
+          <div className="border-card-border border-t md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navItems.map((item) => (
                 <Link
@@ -145,7 +145,7 @@ export function Navigation() {
                     'block rounded-md px-3 py-2 font-mono text-sm transition-colors',
                     pathname === item.href
                       ? 'bg-casting-green/10 text-casting-green'
-                      : 'text-stream-blue dark:text-terminal-text hover:bg-morning-mist dark:hover:bg-stream-blue/20 hover:text-casting-green'
+                      : 'text-secondary hover:bg-light-surface dark:hover:bg-dark-surface hover:text-casting-green'
                   )}
                 >
                   {item.label}

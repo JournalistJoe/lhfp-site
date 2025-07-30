@@ -70,10 +70,10 @@ export default function CaseStudiesPage() {
       {/* Hero Section */}
       <section className="relative px-4 py-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary dark:text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
             Case Studies
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Real problems. Careful observation. Custom solutions. Measurable
             results.
           </p>
@@ -84,13 +84,13 @@ export default function CaseStudiesPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
-            {caseStudies.map((study, index) => (
+            {caseStudies.map((study) => (
               <Link
                 key={study.id}
                 href={`/case-studies/${study.slug}`}
                 className="group block"
               >
-                <div className="dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 overflow-hidden rounded-2xl bg-white/90 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl dark:ring-1">
+                <div className="dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 overflow-hidden rounded-2xl bg-surface backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl dark:ring-1">
                   <div className="flex flex-col lg:flex-row">
                     {/* Content Side */}
                     <div className="flex-1 p-8 md:p-12">
@@ -99,30 +99,30 @@ export default function CaseStudiesPage() {
                           <study.Icon size={32} weight="regular" />
                         </div>
                         <div>
-                          <p className="text-stream-blue dark:text-terminal-text/70 text-sm font-medium">
+                          <p className="text-muted-foreground text-sm font-medium">
                             {study.client}
                           </p>
-                          <p className="text-river-stone dark:text-terminal-text/50 text-sm">
+                          <p className="text-muted-foreground text-sm">
                             {study.industry}
                           </p>
                         </div>
                       </div>
 
-                      <h2 className="text-deep-water dark:text-terminal-text mb-4 text-2xl font-bold md:text-3xl">
+                      <h2 className="text-primary dark:text-primary mb-4 text-2xl font-bold md:text-3xl">
                         {study.title}
                       </h2>
 
                       <div className="mb-6 space-y-4">
                         <div>
-                          <p className="text-river-stone dark:text-terminal-text/60 mb-1 text-sm font-medium uppercase tracking-wider">
+                          <p className="text-muted-foreground mb-1 text-sm font-medium uppercase tracking-wider">
                             Challenge
                           </p>
-                          <p className="text-stream-blue dark:text-terminal-text/80">
+                          <p className="text-secondary">
                             {study.challenge}
                           </p>
                         </div>
                         <div>
-                          <p className="text-river-stone dark:text-terminal-text/60 mb-1 text-sm font-medium uppercase tracking-wider">
+                          <p className="text-muted-foreground mb-1 text-sm font-medium uppercase tracking-wider">
                             Result
                           </p>
                           <p className="text-casting-green font-medium">
@@ -169,10 +169,10 @@ export default function CaseStudiesPage() {
 
           {/* CTA Section */}
           <div className="mt-20 text-center">
-            <h3 className="text-morning-mist dark:text-terminal-text mb-6 text-2xl font-semibold">
+            <h3 className="text-primary dark:text-primary mb-6 text-2xl font-semibold">
               Ready to be our next success story?
             </h3>
-            <p className="text-river-stone dark:text-terminal-text/70 mb-8 text-lg">
+            <p className="text-muted-foreground mb-8 text-lg">
               Let&apos;s talk about how we can help solve your specific
               challenges.
             </p>

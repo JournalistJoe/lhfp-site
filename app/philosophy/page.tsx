@@ -54,7 +54,7 @@ export default function PhilosophyPage() {
         <div className="from-stream-blue via-deep-water to-deep-water dark:from-deep-water dark:via-deep-water/90 absolute inset-0 bg-gradient-to-br dark:to-black" />
         <div className="absolute inset-0 opacity-10 dark:opacity-20">
           <div className="bg-casting-green/20 absolute top-1/4 left-1/3 h-96 w-96 animate-pulse rounded-full blur-3xl" />
-          <div className="bg-stream-blue/20 animation-delay-2000 absolute bottom-1/3 right-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
+          <div className="bg-dark-border/20 animation-delay-2000 absolute bottom-1/3 right-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
         </div>
       </div>
 
@@ -64,10 +64,10 @@ export default function PhilosophyPage() {
           <div className="mb-8 flex justify-center text-casting-green">
             <Fish size={64} weight="regular" />
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
             Match the Hatch
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Our philosophy is simple: observe carefully, adapt thoughtfully,
             work patiently. The same principles that catch fish build great
             digital experiences.
@@ -77,19 +77,19 @@ export default function PhilosophyPage() {
 
       {/* Introduction Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+        <div className="container mx-auto max-w-6xl">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               A Different Approach
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 Most agencies show up with a tackle box full of
                 &ldquo;best practices&rdquo; and &ldquo;proven
                 solutions.&rdquo; They cast the same lures in every stream,
                 wondering why they don&apos;t always work.
               </p>
-              <p className="text-stream-blue dark:text-terminal-text/80 mt-4">
+              <p className="text-secondary mt-4">
                 We learned from fly fishing that success comes from
                 understanding the specific conditions you&apos;re facing. What
                 worked yesterday might not work today. What works upstream
@@ -106,12 +106,12 @@ export default function PhilosophyPage() {
 
       {/* Three Principles Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
-            <h2 className="text-morning-mist dark:text-terminal-text mb-4 text-3xl font-bold md:text-4xl">
+            <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
               The Three Principles
             </h2>
-            <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-2xl text-lg">
+            <p className="text-secondary mx-auto max-w-2xl text-lg">
               Every successful fly fisherman follows these principles. So do we.
             </p>
           </div>
@@ -126,28 +126,28 @@ export default function PhilosophyPage() {
               >
                 {/* Content */}
                 <div className="flex-1">
-                  <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
+                  <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
                     <div className="mb-6 flex items-center gap-4">
                       <div className="text-casting-green">
                         <principle.Icon size={48} weight="regular" />
                       </div>
                       <div>
-                        <h3 className="text-deep-water dark:text-terminal-text text-3xl font-bold">
+                        <h3 className="text-primary text-3xl font-bold">
                           {principle.title}
                         </h3>
-                        <p className="text-stream-blue dark:text-terminal-text/70 text-lg italic">
+                        <p className="text-muted-foreground text-lg italic">
                           {principle.subtitle}
                         </p>
                       </div>
                     </div>
-                    <p className="text-stream-blue dark:text-terminal-text/80 mb-6 text-lg">
+                    <p className="text-secondary mb-6 text-lg">
                       {principle.description}
                     </p>
                     <ul className="space-y-3">
                       {principle.details.map((detail) => (
                         <li
                           key={detail}
-                          className="flex items-start gap-3 text-river-stone dark:text-terminal-text/70"
+                          className="flex items-start gap-3 text-muted-foreground"
                         >
                           <span className="bg-casting-green/20 mt-1.5 block h-2 w-2 flex-shrink-0 rounded-full" />
                           {detail}
@@ -176,7 +176,7 @@ export default function PhilosophyPage() {
                           className={`h-2 w-2 rounded-full ${
                             i % 3 === index
                               ? 'bg-casting-green'
-                              : 'bg-stream-blue/30 dark:bg-terminal-text/30'
+                              : 'bg-dark-border/30 dark:bg-dark-border/30'
                           }`}
                           style={{
                             animationDelay: `${i * 200}ms`,
@@ -194,16 +194,16 @@ export default function PhilosophyPage() {
 
       {/* How We Work Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+        <div className="container mx-auto max-w-6xl">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               How This Looks in Practice
             </h2>
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 When you work with us, you&apos;ll notice the difference:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/80 mt-4 space-y-2">
+              <ul className="text-secondary mt-4 space-y-2">
                 <li>
                   We ask more questions than most agencies. We&apos;re not
                   being difficult — we&apos;re observing.
@@ -217,7 +217,7 @@ export default function PhilosophyPage() {
                   pays off when you&apos;re building something that lasts.
                 </li>
               </ul>
-              <p className="text-stream-blue dark:text-terminal-text/80 mt-6">
+              <p className="text-secondary mt-6">
                 This approach takes more time upfront. It requires trust. But
                 it&apos;s the only way we&apos;ve found to consistently deliver
                 results that matter.
@@ -229,13 +229,13 @@ export default function PhilosophyPage() {
 
       {/* CTA Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="from-casting-green to-current-teal overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 text-center backdrop-blur-md md:p-12">
-              <h2 className="text-deep-water dark:text-terminal-text mb-4 text-3xl font-bold">
+            <div className="dark:bg-background/95 rounded-xl bg-white/95 p-8 text-center backdrop-blur-md md:p-12">
+              <h2 className="text-primary mb-4 text-3xl font-bold">
                 Ready to Try a Different Approach?
               </h2>
-              <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+              <p className="text-secondary mb-8 text-lg">
                 Let&apos;s talk about the specific challenges in your digital
                 waters.
               </p>
@@ -243,7 +243,7 @@ export default function PhilosophyPage() {
                 <CastLineCTA />
                 <Link
                   href="/services"
-                  className="text-stream-blue hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green flex items-center gap-2 font-medium underline-offset-4 transition-colors hover:underline"
+                  className="text-secondary hover:text-casting-green flex items-center gap-2 font-medium underline-offset-4 transition-colors hover:underline"
                 >
                   Explore Our Services
                   <ArrowRight size={20} weight="regular" />

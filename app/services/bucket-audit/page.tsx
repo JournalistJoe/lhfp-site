@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Funnel, Check, ArrowLeft, ArrowRight } from '@phosphor-icons/react'
+import { Funnel } from '@phosphor-icons/react'
 import { CastLineCTA } from '@/components/cast-line-cta'
 
 export default function BucketAuditPage() {
@@ -11,7 +11,7 @@ export default function BucketAuditPage() {
       <div className="fixed inset-0 -z-10">
         <div className="from-stream-blue via-deep-water to-deep-water dark:from-deep-water dark:via-deep-water/90 absolute inset-0 bg-gradient-to-br dark:to-black" />
         <div className="absolute inset-0 opacity-10 dark:opacity-20">
-          <div className="bg-stream-blue/20 absolute top-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
+          <div className="bg-dark-border/20 absolute top-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full blur-3xl" />
         </div>
       </div>
 
@@ -21,10 +21,10 @@ export default function BucketAuditPage() {
           <div className="mb-8 text-casting-green flex justify-center">
             <Funnel size={64} weight="regular" />
           </div>
-          <h1 className="text-morning-mist dark:text-terminal-text mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
+          <h1 className="text-primary mb-6 text-5xl font-bold md:text-6xl lg:text-7xl">
             Is Your Bucket Leaking?
           </h1>
-          <p className="text-river-stone dark:text-terminal-text/80 mx-auto max-w-3xl text-xl md:text-2xl">
+          <p className="text-secondary mx-auto max-w-3xl text-xl md:text-2xl">
             Most businesses are hemorrhaging potential customers. We&apos;ll
             show you where and how to fix it.
           </p>
@@ -34,20 +34,20 @@ export default function BucketAuditPage() {
       {/* The Problem Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               The Problem
             </h2>
             <div className="prose prose-lg dark:prose-invert">
-              <p className="text-stream-blue dark:text-terminal-text/80">
+              <p className="text-secondary">
                 You&apos;re spending money on ads. Creating content. Building
                 traffic. But somehow, those visitors vanish like water through a
                 sieve.
               </p>
-              <p className="text-stream-blue dark:text-terminal-text/80 mb-6">
+              <p className="text-secondary mb-6">
                 The culprit? Usually a combination of:
               </p>
-              <ul className="text-stream-blue dark:text-terminal-text/70 space-y-3">
+              <ul className="text-muted-foreground space-y-3">
                 <li>Poor data capture strategies</li>
                 <li>Non-existent email follow-up</li>
                 <li>Broken conversion paths</li>
@@ -66,11 +66,11 @@ export default function BucketAuditPage() {
       {/* Our Approach Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               Our Approach
             </h2>
-            <p className="text-stream-blue dark:text-terminal-text/80 mb-8 text-lg">
+            <p className="text-secondary mb-8 text-lg">
               We conduct a comprehensive audit of your entire digital ecosystem:
             </p>
             <div className="grid gap-6 md:grid-cols-2">
@@ -111,10 +111,10 @@ export default function BucketAuditPage() {
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="text-deep-water dark:text-terminal-text mb-1 font-semibold">
+                    <h3 className="text-primary mb-1 font-semibold">
                       {step.title}
                     </h3>
-                    <p className="text-stream-blue dark:text-terminal-text/70 text-sm">
+                    <p className="text-muted-foreground text-sm">
                       {step.description}
                     </p>
                   </div>
@@ -128,8 +128,8 @@ export default function BucketAuditPage() {
       {/* What You Get Section */}
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
-          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-white/90 p-8 backdrop-blur-md md:p-12 dark:ring-1">
-            <h2 className="text-deep-water dark:text-terminal-text mb-6 text-3xl font-bold">
+          <div className="dark:bg-dark-card/80 dark:ring-dark-border rounded-2xl bg-surface p-8 backdrop-blur-md md:p-12 dark:ring-1">
+            <h2 className="text-primary mb-6 text-3xl font-bold">
               What You Get
             </h2>
             <ul className="space-y-4">
@@ -154,7 +154,7 @@ export default function BucketAuditPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-stream-blue dark:text-terminal-text/80">
+                  <span className="text-secondary">
                     {item}
                   </span>
                 </li>
@@ -168,18 +168,18 @@ export default function BucketAuditPage() {
       <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <div className="from-casting-green to-current-teal overflow-hidden rounded-2xl bg-gradient-to-br p-1">
-            <div className="dark:bg-deep-water/95 rounded-xl bg-white/95 p-8 backdrop-blur-md md:p-12">
+            <div className="bg-surface/95 dark:bg-dark-bg/95 rounded-xl p-8 backdrop-blur-md md:p-12">
               <div className="text-center">
-                <h2 className="text-deep-water dark:text-terminal-text mb-2 text-3xl font-bold">
+                <h2 className="text-primary mb-2 text-3xl font-bold">
                   Investment
                 </h2>
                 <p className="text-casting-green mb-6 font-mono text-6xl font-bold">
                   $1,500
                 </p>
-                <p className="text-stream-blue dark:text-terminal-text/80 mb-2 text-lg">
+                <p className="text-secondary mb-2 text-lg">
                   Flat fee, no surprises
                 </p>
-                <p className="text-stream-blue dark:text-terminal-text/70 mb-8">
+                <p className="text-muted-foreground mb-8">
                   Timeline: 5-7 business days
                 </p>
                 <CastLineCTA text="Plug the Leaks" />
@@ -193,7 +193,7 @@ export default function BucketAuditPage() {
       <section className="relative px-4 pb-24 text-center sm:px-6 lg:px-8">
         <Link
           href="/services"
-          className="text-morning-mist hover:text-casting-green dark:text-terminal-text dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
+          className="text-primary hover:text-casting-green dark:text-primary dark:hover:text-casting-green inline-flex items-center gap-2 font-medium"
         >
           <svg
             className="h-5 w-5"

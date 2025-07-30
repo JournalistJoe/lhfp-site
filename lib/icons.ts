@@ -24,7 +24,7 @@ import {
   
   // Feature Icons
   Crosshair,
-  Flow,
+  FlowArrow,
   ChartLine,
   Users,
   Code,
@@ -76,7 +76,7 @@ export {
   
   // Feature Icons
   Crosshair as TargetIcon,
-  Flow as FlowIcon,
+  FlowArrow as FlowIcon,
   ChartLine as GrowthIcon,
   Users as TeamIcon,
   Code as CodeIcon,
