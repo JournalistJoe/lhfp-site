@@ -9,7 +9,13 @@ export const CASE_STUDIES_QUERY = groq`
     industry,
     services,
     excerpt,
-    featuredImage,
+    featuredImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
     publishedAt
   }
 `
@@ -29,7 +35,13 @@ export const CASE_STUDY_QUERY = groq`
     results,
     testimonial,
     technologies,
-    featuredImage,
+    featuredImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
     publishedAt
   }
 `
@@ -44,7 +56,13 @@ export const BLOG_POSTS_QUERY = groq`
       image
     },
     excerpt,
-    mainImage,
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
     categories[]->{
       title,
       slug,
@@ -71,7 +89,13 @@ export const BLOG_POST_QUERY = groq`
       social
     },
     excerpt,
-    mainImage,
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
     categories[]->{
       title,
       slug,
@@ -94,7 +118,13 @@ export const FEATURED_POSTS_QUERY = groq`
       image
     },
     excerpt,
-    mainImage,
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
+    },
     categories[]->{
       title,
       slug,
