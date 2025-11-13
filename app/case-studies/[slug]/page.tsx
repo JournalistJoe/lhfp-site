@@ -120,7 +120,7 @@ export default async function CaseStudyPage({
             <div className="container mx-auto max-w-5xl">
               <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-stream-blue to-deep-water">
                 <Image
-                  src={urlFor(study.featuredImage).width(1200).height(675).url()}
+                  src={urlFor(study.featuredImage).url()}
                   alt={study.featuredImage.alt || study.title}
                   width={1200}
                   height={675}

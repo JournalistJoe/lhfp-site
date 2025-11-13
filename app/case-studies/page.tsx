@@ -142,7 +142,7 @@ export default function CaseStudiesPage() {
                     >
                       {study.featuredImage ? (
                         <Image
-                          src={urlFor(study.featuredImage).width(400).height(300).url()}
+                          src={urlFor(study.featuredImage).url()}
                           alt={study.title}
                           width={400}
                           height={300}

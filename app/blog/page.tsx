@@ -142,7 +142,7 @@ export default function BlogPage() {
                     {post.mainImage && (
                       <div className="aspect-video overflow-hidden bg-gradient-to-br from-stream-blue to-deep-water">
                         <Image
-                          src={urlFor(post.mainImage).width(600).height(338).url()}
+                          src={urlFor(post.mainImage).url()}
                           alt={post.title}
                           width={600}
                           height={338}
@@ -202,7 +202,7 @@ export default function BlogPage() {
                       <div className="mt-4 pt-4 border-t border-dark-border/20 flex items-center gap-3">
                         {post.author.image && (
                           <Image
-                            src={urlFor(post.author.image).width(32).height(32).url()}
+                            src={urlFor(post.author.image).url()}
                             alt={post.author.name}
                             width={32}
                             height={32}

@@ -103,7 +103,7 @@ export default async function BlogPostPage({
               <div className="flex items-center gap-3">
                 {post.author.image && (
                   <Image
-                    src={urlFor(post.author.image).width(48).height(48).url()}
+                    src={urlFor(post.author.image).url()}
                     alt={post.author.name}
                     width={48}
                     height={48}
@@ -141,7 +141,7 @@ export default async function BlogPostPage({
             <div className="container mx-auto max-w-5xl">
               <div className="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-stream-blue to-deep-water">
                 <Image
-                  src={urlFor(post.mainImage).width(1200).height(675).url()}
+                  src={urlFor(post.mainImage).url()}
                   alt={post.mainImage.alt || post.title}
                   width={1200}
                   height={675}
@@ -186,7 +186,7 @@ export default async function BlogPostPage({
                   <div className="flex gap-4">
                     {post.author.image && (
                       <Image
-                        src={urlFor(post.author.image).width(80).height(80).url()}
+                        src={urlFor(post.author.image).url()}
                         alt={post.author.name}
                         width={80}
                         height={80}
