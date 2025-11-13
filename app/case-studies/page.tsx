@@ -95,7 +95,7 @@ export default function CaseStudiesPage() {
                 <div className="dark:bg-dark-card/80 dark:ring-dark-border dark:hover:ring-casting-green/50 overflow-hidden rounded-2xl bg-surface backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-2xl dark:ring-1">
                   <div className="flex flex-col lg:flex-row">
                     {/* Content Side */}
-                    <div className="flex-1 p-8 md:p-12">
+                    <div className="lg:w-1/2 p-8 md:p-12">
                       <div className="mb-4 flex items-center gap-4">
                         <div className="text-casting-green">
                           <Icon size={32} weight="regular" />
@@ -155,7 +155,7 @@ export default function CaseStudiesPage() {
 
                     {/* Image/Gradient Side */}
                     <div
-                      className={`flex-none bg-gradient-to-br ${gradientColor} p-8 md:p-12 lg:w-96 relative overflow-hidden`}
+                      className={`lg:w-1/2 bg-gradient-to-br ${gradientColor} p-8 md:p-12 relative overflow-hidden`}
                     >
                       {study.featuredImage ? (
                         <Image
