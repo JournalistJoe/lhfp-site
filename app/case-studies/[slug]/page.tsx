@@ -150,7 +150,7 @@ export default async function CaseStudyPage({
         <div className="px-4 pb-24 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-4xl space-y-12">
             {/* Problem Section */}
-            {study.problem && (
+            {study.problem?.content && study.problem.content.length > 0 && (
               <section className="dark:bg-dark-card/50 bg-surface/50 backdrop-blur-sm rounded-2xl p-8 md:p-12">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0">
@@ -176,7 +176,7 @@ export default async function CaseStudyPage({
             )}
 
             {/* Observation Section */}
-            {study.observation && (
+            {study.observation?.content && study.observation.content.length > 0 && (
               <section className="dark:bg-dark-card/50 bg-surface/50 backdrop-blur-sm rounded-2xl p-8 md:p-12">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0">
@@ -202,7 +202,7 @@ export default async function CaseStudyPage({
             )}
 
             {/* Solution Section */}
-            {study.solution && (
+            {study.solution?.content && study.solution.content.length > 0 && (
               <section className="dark:bg-dark-card/50 bg-surface/50 backdrop-blur-sm rounded-2xl p-8 md:p-12">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0">
@@ -228,7 +228,9 @@ export default async function CaseStudyPage({
             )}
 
             {/* Results Section */}
-            {study.results && (
+            {study.results &&
+              ((study.results.metrics && study.results.metrics.length > 0) ||
+                (study.results.content && study.results.content.length > 0)) && (
               <section className="dark:bg-dark-card/50 bg-surface/50 backdrop-blur-sm rounded-2xl p-8 md:p-12">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0">
@@ -282,7 +284,8 @@ export default async function CaseStudyPage({
             )}
 
             {/* Testimonial Section */}
-            {study.testimonial && (
+            {study.testimonial?.quote &&
+              study.testimonial.quote.trim().length > 0 && (
               <section className="dark:bg-dark-card/50 bg-surface/50 backdrop-blur-sm rounded-2xl p-8 md:p-12">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
