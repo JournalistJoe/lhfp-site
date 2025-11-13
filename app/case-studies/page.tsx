@@ -126,7 +126,7 @@ export default function CaseStudiesPage() {
                         </p>
                       </div>
 
-                      <div className="flex flex-wrap items-center gap-4 opacity-0 transition-all group-hover:opacity-100">
+                      <div className="flex flex-wrap items-center gap-4 lg:opacity-0 transition-all lg:group-hover:opacity-100">
                         <div className="flex items-center gap-2 text-casting-green">
                           <span className="font-medium">Read Full Case Study</span>
                           <ArrowRight
