@@ -100,6 +100,7 @@ export interface CaseStudy {
   slug: { current: string }
   client: string
   industry: string
+  projectUrl?: string
   services: string[]
   excerpt: string
   featuredImage?: SanityImage

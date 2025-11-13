@@ -5,6 +5,7 @@ import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 import {
   ArrowLeft,
+  ArrowSquareOut,
   CheckCircle,
   Lightbulb,
   ChartLine,
@@ -81,6 +82,20 @@ export default async function CaseStudyPage({
                 </span>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-muted-foreground">{study.industry}</span>
+                {study.projectUrl && (
+                  <>
+                    <span className="text-muted-foreground">•</span>
+                    <a
+                      href={study.projectUrl}
+                      target="_blank"
+                      rel="dofollow"
+                      className="text-casting-green hover:text-current-teal inline-flex items-center gap-1 transition-colors underline decoration-dotted underline-offset-4"
+                    >
+                      View Live Project
+                      <ArrowSquareOut size={16} weight="regular" />
+                    </a>
+                  </>
+                )}
                 {study.publishedAt && (
                   <>
                     <span className="text-muted-foreground">•</span>

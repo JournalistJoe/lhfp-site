@@ -34,6 +34,16 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'projectUrl',
+      title: 'Project URL',
+      type: 'url',
+      description: 'Link to the live project or client website (will be displayed as a dofollow link for SEO)',
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ['http', 'https'],
+        }),
+    }),
+    defineField({
       name: 'services',
       title: 'Services Provided',
       type: 'array',

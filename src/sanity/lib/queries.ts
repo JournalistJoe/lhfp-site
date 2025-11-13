@@ -27,6 +27,7 @@ export const CASE_STUDY_QUERY = groq`
     slug,
     client,
     industry,
+    projectUrl,
     services,
     excerpt,
     problem,
