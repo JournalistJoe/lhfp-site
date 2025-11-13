@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, ChartLine, Package, Storefront } from '@phosphor-icons/react'
+import { ArrowRight, ArrowSquareOut, ChartLine, Package, Storefront } from '@phosphor-icons/react'
 import { client } from '@/src/sanity/client'
 import { CASE_STUDIES_QUERY } from '@/src/sanity/lib/queries'
 import { urlFor } from '@/src/sanity/client'
@@ -126,13 +126,30 @@ export default function CaseStudiesPage() {
                         </p>
                       </div>
 
-                      <div className="flex items-center gap-2 text-casting-green opacity-0 transition-all group-hover:opacity-100">
-                        <span className="font-medium">Read Full Case Study</span>
-                        <ArrowRight
-                          size={20}
-                          weight="bold"
-                          className="transition-transform group-hover:translate-x-1"
-                        />
+                      <div className="flex flex-wrap items-center gap-4 opacity-0 transition-all group-hover:opacity-100">
+                        <div className="flex items-center gap-2 text-casting-green">
+                          <span className="font-medium">Read Full Case Study</span>
+                          <ArrowRight
+                            size={20}
+                            weight="bold"
+                            className="transition-transform group-hover:translate-x-1"
+                          />
+                        </div>
+                        {study.projectUrl && (
+                          <>
+                            <span className="text-muted-foreground">•</span>
+                            <a
+                              href={study.projectUrl}
+                              target="_blank"
+                              rel="dofollow"
+                              onClick={(e) => e.stopPropagation()}
+                              className="flex items-center gap-2 text-casting-green hover:text-current-teal transition-colors"
+                            >
+                              <span className="font-medium">View Live Project</span>
+                              <ArrowSquareOut size={20} weight="bold" />
+                            </a>
+                          </>
+                        )}
                       </div>
                     </div>
 

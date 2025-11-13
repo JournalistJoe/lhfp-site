@@ -7,6 +7,7 @@ export const CASE_STUDIES_QUERY = groq`
     slug,
     client,
     industry,
+    projectUrl,
     services,
     excerpt,
     featuredImage {
