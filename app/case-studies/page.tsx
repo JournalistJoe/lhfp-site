@@ -155,18 +155,18 @@ export default function CaseStudiesPage() {
 
                     {/* Image/Gradient Side */}
                     <div
-                      className={`lg:w-1/2 bg-gradient-to-br ${gradientColor} p-8 md:p-12 relative overflow-hidden`}
+                      className={`aspect-video lg:aspect-auto lg:w-1/2 bg-gradient-to-br ${gradientColor} relative overflow-hidden`}
                     >
                       {study.featuredImage ? (
                         <Image
                           src={urlFor(study.featuredImage).url()}
                           alt={study.title}
-                          width={400}
-                          height={300}
-                          className="w-full h-full object-cover absolute inset-0"
+                          width={800}
+                          height={450}
+                          className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="flex items-center justify-center h-full">
+                        <div className="flex items-center justify-center h-full p-8 md:p-12">
                           <Icon size={120} weight="thin" className="text-white/20" />
                         </div>
                       )}
